@@ -4,8 +4,8 @@
 var frecuencia=Number(prompt("Ingrese la inductancia")); 
 var inductancia=Number(prompt("Ingrese la capacitancia")); 
 var capacitancia=Number(prompt("Ingrese la frecuencia")); 
-var XL= 6.28*frecuencia*inductancia; 
-var XC= 6.28*frecuencia*capacitancia; 
+var XL= (6.28*frecuencia*inductancia); 
+var XC= 1/(6.28*frecuencia*capacitancia); 
 if( XL>XC ){
  document.write( "<b> el circuito es inductivo</b><br/>"); 
 }
