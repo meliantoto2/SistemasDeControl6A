@@ -1,33 +1,56 @@
 <html>
-<head>
-<script type="text/javascript">
-<!--
-function hypotenuse(a, b) {
- function square(x) { return x*x; }
+    <head>
+        <script type="text/javascript">
+        <!--
 
- return Math.sqrt(square(a) + square(b));
-}
-function suma(par1, par2){
- return par1+par2;
-}
+        var a;
+        var b;
+        var c;
 
+        function square(x){
+            return x*x 
+        }
 
-function secondFunction(h,b){
- var result;
- result = hypotenuse(h,b);
- document.write ( "hipotenus=" + result );
- document.write ( "<br/>suma=" + suma(h,b) );
-}
-//-->
-</script>
-</head>
-<body>
-<p>Click the following button to call the function</p>
-<form>
-<script>
-	
-</script>
-</form>
-<p>Use different parameters inside the function and then try...</p>
-</body>
+        function hypotenuse(a, b) {
+            return Math.sqrt(square(a) + square(b));
+        }
+  
+        function perimetro(a,b,c){
+            return a+b+c;
+        }
+
+       function area(a,b){
+            return a*b/2;
+        }
+
+        function resultado(){
+            var d;
+            var e;
+
+            c = hypotenuse(a, b);
+            d = perimetro(a,b,c);
+            e = area(a, b);
+
+            document.write ( "Hipotenusa:",c ); document.write ("<br/>");
+            document.write ( "Perimetro:",d); document.write ("<br/>");
+            document.write ( "Area:",e); document.write ("<br/>"); 
+            document.write("<br/><br/><p><a href=\"../index.html\">volver</a></p>");
+        
+            
+        }
+
+        function perdirDatos(){
+            a = Number(prompt("Ingresar primer lado"))
+            b= Number(prompt("Ingresar segundo lado"))
+
+            resultado()
+        }
+
+        //-->
+        </script>
+    </head>
+    <body>
+        <h3>dale click al boton para ingresar los datos del triangulo</h3> 
+         <input type="button" onclick="perdirDatos()" value="Call Function"> 
+     </body>
 </html>
